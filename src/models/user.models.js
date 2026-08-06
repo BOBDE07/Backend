@@ -55,15 +55,15 @@ const userSchema = new mongoose.Schema({
 userSchema.pre("save", async function (next) {
     // password update nhi hua to next mei jao 
     if(!this.isModified("password")){
-        return next() 
+        return next
     }
-    this.password = brycpt.hash(this.password , 10)
-    next()
+    this.password = bcrypt.hash(this.password , 10)
+    next
 }) 
 
 // password or bcrypt password ko compare kr rhe hai 
 userSchema.methods.isPasswordCorrect = async function(password) {
-    return await brycpt.compare(password , this.password)
+    return await bcrypt.compare(password , this.password)
 }
 
 userSchema.methods.generateAccessToken = function() {
