@@ -61,7 +61,7 @@ userSchema.pre("save", async function (next) {
     next()
 }) 
 
-// 
+// password or bcrypt password ko compare kr rhe hai 
 userSchema.methods.isPasswordCorrect = async function(password) {
     return await brycpt.compare(password , this.password)
 }
