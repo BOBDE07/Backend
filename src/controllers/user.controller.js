@@ -180,6 +180,7 @@ const userLogOut = asyncHandler(async ( req , res , next ) => {
                 new ApiResponse(200 , {} , 'User logged Out successfully.')
             )
 })
+<<<<<<< HEAD
 
 
 const refreshAccessToken = asyncHandler (async ( req , res ) => {
@@ -228,10 +229,16 @@ const refreshAccessToken = asyncHandler (async ( req , res ) => {
     }
 
 })
+=======
+>>>>>>> 8dace3417d7cb7b96f6d13211f5e6f5f2a09ef92
 
 export {
     userRegister,
     userLogin ,
+<<<<<<< HEAD
     userLogOut ,
     refreshAccessToken
+=======
+    userLogOut
+>>>>>>> 8dace3417d7cb7b96f6d13211f5e6f5f2a09ef92
 }
