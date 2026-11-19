@@ -28,7 +28,7 @@ userRouter.patch('/update-details' , verifyJWT , updateAccountDetails)
 
 userRouter.patch('/avatar-change' , verifyJWT , upload.single("avatar"), updateUserAvatar)
 
-userRouter.patch('/coverIamge-change' , verifyJWT , upload.single("/coverImage"), updateUserCoverImage)
+userRouter.patch('/coverIamge-change' , verifyJWT , upload.single("coverImage"), updateUserCoverImage)
 
 userRouter.get('/c/:username' , verifyJWT , getUserChannelProfile) 
 
