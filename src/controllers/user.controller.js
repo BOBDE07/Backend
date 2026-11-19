@@ -465,6 +465,7 @@ export {
     userLogOut,
     refreshAccessToken,
     changeCurrentPassword , 
+    getCurrentUser ,
     updateAccountDetails , 
     updateUserAvatar,
     updateUserCoverImage ,
